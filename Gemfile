@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-# application gems
-gem 'rails', '4.0.2'
+# application gemsy
+gem 'rails', '4.1.9' # version previously 4.0.2
 gem 'pg', '~> 0.17.1'
 gem 'thin', '~> 1.6.1'
 
 # assets and views
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.0' # version previously 4.0.0
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5.0' # version previously unspecified
 
 group :test, :development do
   gem 'quiet_assets'
