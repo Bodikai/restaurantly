@@ -1,5 +1,8 @@
 .row
-	.large-8.columns.large-centered
-		%h1
-			= @restaurant.name
-		= @restaurant.inspect
+  .large-8.columns.large-centered
+    %h1
+      %center
+        %i= @restaurant.name
+    = @restaurant.inspect
+    .center
+      %p= link_to "return to index", restaurants_path

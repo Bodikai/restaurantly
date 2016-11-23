@@ -1,12 +1,21 @@
 .row
   .large-8.columns.large-centered
     %h3.subheader.center
-      Restaurantly Spots!
+      %b Restaurantly Spots!
 
 .row
   .large-8.columns.large-centered
+    %h5.subheader.center
+      = link_to "new", new_restaurant_path
+
+.row
+  %br
+  .large-8.columns.large-centered
     - @restaurants.each do |restaurant|
-      %h5.subheader
+      %h5.subheader.center
         = restaurant.name
-        = link_to "edit", edit_restaurant_path(restaurant)
-        = link_to "destroy", restaurant_path(restaurant), method: :delete
+        (
+        %i= link_to "edit", edit_restaurant_path(restaurant)
+        |
+        %i= link_to "destroy", restaurant_path(restaurant), method: :delete
+        )

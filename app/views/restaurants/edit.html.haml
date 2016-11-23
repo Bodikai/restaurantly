@@ -1,5 +1,14 @@
 .row
   .large-8.columns.large-centered
+    %h3.subheader.center
+      %b Edit Restaurantly Spot!
+
+%br
+
+.row
+  .large-8.columns.large-centered
     = form_for @restaurant do |restaurant|
       = restaurant.text_field :name
-      = restaurant.submit "update", class: "button"
+      %center
+        = restaurant.submit "update", class: "button"
+        %br= link_to "back", restaurants_path
