@@ -8,14 +8,13 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" %>
-    <%- # removed 'data-turbolinks-track' => true from previous line to fix DELETE method not working -%>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
 
     <%= yield %>
-
+    <%= render "layouts/sign_in" %>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
